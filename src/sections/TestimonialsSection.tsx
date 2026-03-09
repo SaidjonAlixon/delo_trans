@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Star, Truck, Globe } from 'lucide-react';
@@ -101,8 +101,7 @@ export default function TestimonialsSection() {
   const headerRef = useRef<HTMLDivElement>(null);
   const leftColRef = useRef<HTMLDivElement>(null);
   const rightColRef = useRef<HTMLDivElement>(null);
-  const [driverIdx, setDriverIdx] = useState(0);
-  const [partnerIdx, setPartnerIdx] = useState(0);
+
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
